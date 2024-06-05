@@ -5,6 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>作品成果與個人字介</title>
 	<style type="text/css">
+:root{
+    --hoverColor: rgb(239, 56, 126);
+}
 		*{
 			margin: 0;
 			padding: 0;
@@ -15,15 +18,14 @@
 			z-index: -2;
 			opacity: 0;
 		}
-		img{
-			height: auto;
-          max-width: 100%;
-		}
 		.header{
 			position: sticky;
-        	top: 0px;
+        		top: 0px;
 			height: 50px;
-			background-color: #898989;
+		}
+		img{
+			height: auto;
+          	max-width: 100%;
 		}
 		.logo{
 			width: 60px;
@@ -45,6 +47,7 @@
 			position: absolute;
 			top: 5px;
 			right: 10px;
+			border-radius: 0.5rem;
 		}
 		.menu_btn span{
 			opacity: 0;
@@ -67,13 +70,14 @@
 						0px -8px 0px #ccc;
 		}
 		nav{
-			width: 80%;
-			height: calc(100vh - 50px);
+			width: 40%;
+			height: 274px;
 			background-color: rgba(237, 148, 148, 0.941);
 			position: absolute;
 			top: 50px;
 			right: -100%;
 			transition: .8s;
+			border-radius: 0.5rem;
 		}
 		nav a:hover {
         background-color: white;
@@ -85,16 +89,25 @@
 			color:white ;
 			padding: 10px 20px;
 			border-bottom: 1px solid white;
+            background-color: palevioletred;
+			border-radius: 0.5rem;
+			border: 2px solid var(--hoverColor);
 		}
 		#menu_control:checked ~ .header nav{
 			right: 0;
 		}
 		@media screen and (min-width:768px){
 			.menu_btn{display: none;}
+			body { 
+            width: 30%;
+            margin: 0 auto;}
+        main {
+            height: auto;
+          	max-width: 100%;
+        }
 			.header{
 				display: flex;
 				justify-content: space-between;
-				background-color: rgba(237, 148, 148, 0.941);
 				align-items: center;
 			}
 			nav{
@@ -111,55 +124,71 @@
 			}
 		}
 		body {
-            width: 100%; 
-            min-width: 600px; 
-            max-width: 960px;		
-            background: beige;
+            width: 100%; 	
             margin: 0 auto;
+			background-color: rgb(68,147,147);
         }	
         header {
             display:flex;justify-content: center;align-items: center;
             width: 100%;
             height: 80px;	  
-            background: #eaeaea;		
+            		
         }	
         main {
-            width: 51%;
+            width: 49%;
             height: 400px;
-            background: deepskyblue;
             float: left;	
         }
         aside {
-            width: 48%;
+            width: 49%;
             height: 400px;		
-            background: orange;
             float: right;	
         }
-        footer {
-            width: 100%;
-            background: #eaeaea;		
-            clear: both;        
-        }	
+		#background{
+			width: 100%;
+			height: 100%;
+		}
+		.A{
+			width: 100%;
+			min-width: 600px;
+			max-width: 960px;
+			margin: 0 auto;
+			min-height: 100vh;
+			text-align: center;
+			font-weight: bold;
+			justify-content: center;
+			flex-direction: row;
+			align-content: center;
+			flex-wrap: wrap;
+		}
+		.B{
+			width: 100%;
+			min-width: 600px;
+			max-width: 960px;
+			margin: 0 auto;
+		}
 	</style>
 </head>
 <body>
-	<header><h1 id="seven">作品成果與個人字介</h1></header>
+
+<div class="B">
+	<header><h1 style="color: white;">作品成果與個人字介</h1></header>
 	<input type="checkbox" name="" id="menu_control">
 
 	<div class="header">
 		<h1 class="logo">
-			<a href="https://simonsohai.github.io/myweb/%E4%BD%9C%E5%93%81%E6%88%90%E6%9E%9C%E8%88%87%E5%80%8B%E4%BA%BA%E5%AD%97%E4%BB%8B.html">
+			<a href="https://simonsohai.github.io/myweb/%E4%BD%9C%E5%93%81%E6%88%90%E6%9E%9C%E8%88%87%E5%80%8B%E4%BA%BA%E5%AD%97%E4%BB%8B.html"target="_blank">
 				<img style="width: 45px;height: 45px;" src="https://i.imgur.com/tCLFr5w.png"></a>
 		</h1>
 		<label for="menu_control" class="menu_btn">
 			<span>選單</span>
 		</label>
 		<nav>
-		<a href="https://simonsohai.github.io/book-review/%E6%9B%B8%E5%AF%A9%E6%9F%A5%E9%96%B1.html" >書審</a>
+		<a href="https://simonsohai.github.io/myweb/%E4%BD%9C%E5%93%81%E6%88%90%E6%9E%9C%E8%88%87%E5%80%8B%E4%BA%BA%E5%AD%97%E4%BB%8B.html" >書審</a>
         <a href="https://simonsohai.github.io/myself/%E8%87%AA%E6%88%91%E4%BB%8B%E7%B4%B9.html">個人介紹</a>
         <a href="https://simonsohai.github.io/learning/%E8%87%AA%E5%AD%B8%E7%B6%B2%E7%AB%99.html">討論與自學網站</a>
         <a href="https://simonsohai.github.io/-01/%E8%AD%89%E7%85%A7.html">證照</a>
-        <a href="https://drive.google.com/file/d/1phBzw7RRp3PUlyhSIqLSb5JGA9CThrzB/view?usp=sharing">專題製作</a>
+        <a href="https://drive.google.com/file/d/1LEexkL4yMiArCTzPWdxPPu22Rj-PsSvq/view?usp=sharing">專題製作</a>
         <a href="https://simonsohai.github.io/-/%E8%81%AF%E7%B5%A1%E8%B3%87%E8%A8%8A.html">聯絡資訊</a>
 		</nav>
 	</div>
@@ -187,5 +216,6 @@
 	<img src="https://i.imgur.com/pgnxMsn.jpeg">
 	<img src="https://i.imgur.com/fR740m6.png">
 	<img src="https://i.imgur.com/LCeJys8.png">
+</div>
 </body>
 </html>
